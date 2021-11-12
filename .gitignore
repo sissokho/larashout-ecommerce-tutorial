@@ -4,6 +4,7 @@
 /public/backend
 /public/frontend
 /public/uploads
+/public/mix-manifest.json
 /storage/*.key
 /vendor
 .env
