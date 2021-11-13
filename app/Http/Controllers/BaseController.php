@@ -44,7 +44,7 @@ class BaseController extends Controller
         return redirect()->route($route);
     }
 
-    public function responseRedirectBack($message, $type = 'info', $error = false, , $withOldInputWhenError = false)
+    public function responseRedirectBack($message, $type = 'info', $error = false, $withOldInputWhenError = false)
     {
         $this->setFlashMessage($message, $type);
         $this->showFlashMessages();
