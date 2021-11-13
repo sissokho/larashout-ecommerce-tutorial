@@ -24,7 +24,7 @@ class Setting extends Model
         return $entry->value;
     }
 
-    public function set($key, $value = null)
+    public static function set($key, $value = null)
     {
         $setting = new self();
 
