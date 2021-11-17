@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\AttributeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
@@ -30,5 +31,16 @@ Route::prefix('admin')
                 Route::get('/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
                 Route::post('/update', [CategoryController::class, 'update'])->name('categories.update');
                 Route::get('/{id}/delete', [CategoryController::class, 'delete'])->name('categories.delete');
+            });
+
+        Route::prefix('attributes')
+            ->group(function () {
+
+                Route::get('/', [AttributeController::class, 'index'])->name('attributes.index');
+                Route::get('/create', [AttributeController::class, 'create'])->name('attributes.create');
+                Route::post('/store', [AttributeController::class, 'store'])->name('attributes.store');
+                Route::get('/{id}/edit', [AttributeController::class, 'edit'])->name('attributes.edit');
+                Route::post('/update', [AttributeController::class, 'update'])->name('attributes.update');
+                Route::get('/{id}/delete', [AttributeController::class, 'delete'])->name('attributes.delete');
             });
     });

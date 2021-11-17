@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\AttributeValue;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +18,8 @@ class DatabaseSeeder extends Seeder
             AdminSeeder::class,
             SettingSeeder::class,
             CategorySeeder::class,
+            AttributeSeeder::class,
+            AttributeValue::class,
         ]);
     }
 }
